@@ -1,6 +1,7 @@
 #ifndef beep_h
 #define beep_h
 #include"morse.h"
+#include<Windows.h>
 
 class beep: public morse
 {
@@ -8,11 +9,14 @@ public:
 	beep();
 	beep(const beep& b_p);
 	beep& operator=(const beep& b_p);
+	~beep();
 	void makeDot();
 	void makeDash();
 	void makeSpace();
 	void convert(std::string s_p);
-	~beep();
+	void convert(int i_p);
+	void convert(float f_p);
+	
 private://znajdz przyklad ze nie private
 	int m_frequency;  // przechowuje czestotliwosc dla sygna³u dŸwiêkowego 
 	int m_dotTime;    // przechowuje czas trwania sygna³u dŸwiêkowego dla kropki

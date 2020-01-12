@@ -13,8 +13,10 @@ public:
 	void convert(float f_p);
 	void setExtInfo(std::string s_p);
 	void setOutput(int i_p);
-	const int beep = 1;
-
+	static const int beepNumber = 1;
+private:
+	morse* m_m;
+	std::string extInfo;
 
 };
 
