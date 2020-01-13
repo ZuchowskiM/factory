@@ -33,17 +33,17 @@ factory::~factory()
 
 void factory::convert(std::string s_p)
 {
-	m_m->convert(s_p);
+	m_m->convert(s_p, extInfo);
 }
 
 void factory::convert(int i_p)
 {
-	m_m->convert(i_p);
+	m_m->convert(i_p, extInfo);
 }
 
 void factory::convert(float f_p)
 {
-	m_m->convert(f_p);
+	m_m->convert(f_p, extInfo);
 }
 
 void factory::setExtInfo(std::string s_p)
@@ -55,8 +55,16 @@ void factory::setOutput(int i_p)
 {
 	delete m_m;
 	
-	if (i_p == 1)
+	if (i_p == factory::beepNumber)
 	{
 		m_m = new beep();
+	}
+	else if (i_p == factory::consoleNumber)
+	{
+		m_m = new console();
+	}
+	else if (i_p == factory::discNumber)
+	{
+		m_m = new disc();
 	}
 }

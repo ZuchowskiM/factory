@@ -116,12 +116,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="beep.cpp" />
+    <ClCompile Include="console.cpp" />
+    <ClCompile Include="disc.cpp" />
     <ClCompile Include="factory.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="morse.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="beep.h" />
+    <ClInclude Include="console.h" />
+    <ClInclude Include="disc.h" />
     <ClInclude Include="factory.h" />
     <ClInclude Include="morse.h" />
   </ItemGroup>

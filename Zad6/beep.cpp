@@ -4,7 +4,7 @@
 
 beep::beep(): morse()
 {
-	m_frequency = 800; 
+	m_frequency = 3200; 
 	m_dotTime = 50;    
     m_dashTime = 100;  
 	m_pause = 100;      
@@ -58,8 +58,9 @@ void beep::makeSpace()
 }
 
 
-void beep::convert(std::string s_p)
+void beep::convert(std::string s_p, std::string extInfo)
 {
+	setFromInfo(extInfo);
 	std::string temp = ToMorseCode(s_p);
 
 	for (int i = 0; i < temp.size(); i++)
@@ -84,8 +85,9 @@ void beep::convert(std::string s_p)
 
 
 
-void beep::convert(int i_p)
+void beep::convert(int i_p, std::string extInfo)
 {
+	setFromInfo(extInfo);
 	std::string temp = ToMorseCode(std::to_string(i_p));
 
 	for (int i = 0; i < temp.size(); i++)
@@ -108,8 +110,9 @@ void beep::convert(int i_p)
 	}
 }
 
-void beep::convert(float f_p)
+void beep::convert(float f_p, std::string extInfo)
 {
+	setFromInfo(extInfo);
 	std::string temp = ToMorseCode(std::to_string(f_p));
 
 	for (int i = 0; i < temp.size(); i++)
@@ -132,3 +135,16 @@ void beep::convert(float f_p)
 	}
 }
 
+void beep::setFromInfo(std::string info_p)
+{
+	std::istringstream streamFromString(info_p);
+	streamFromString >> m_frequency;
+	/*streamFromString.clear();
+	while (!isspace(streamFromString.get()))
+		continue;*/
+	streamFromString >> m_dotTime;
+	streamFromString >> m_dashTime;  
+	streamFromString >> m_pause;      
+	streamFromString >> m_spacePause; 
+	streamFromString >> m_charPause;
+}

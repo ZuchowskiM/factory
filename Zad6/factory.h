@@ -1,6 +1,9 @@
 #ifndef factory_h
 #define factory_h
 #include"beep.h"
+#include"console.h"
+#include "disc.h"
+
 class factory
 {
 public:
@@ -14,6 +17,8 @@ public:
 	void setExtInfo(std::string s_p);
 	void setOutput(int i_p);
 	static const int beepNumber = 1;
+	static const int consoleNumber = 2;
+	static const int discNumber = 3;
 private:
 	morse* m_m;
 	std::string extInfo;

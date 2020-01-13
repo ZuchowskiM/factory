@@ -2,10 +2,13 @@
 #define morse_h
 #include<iostream>
 #include<string>
+#include<sstream>
+class factory;
 
 class morse
 {
-public:
+friend class factory;
+protected:
 	morse();
 	morse(const morse& m_p);
 	morse& operator=(const morse& m_p);
@@ -13,12 +16,11 @@ public:
 	virtual void makeDot() = 0;
 	virtual void makeDash() = 0;
 	virtual void makeSpace() = 0;
-	virtual void convert(std::string s_p)=0;
-	virtual void convert(int i_p)=0;
-	virtual void convert(float f_p)=0;
+	virtual void convert(std::string s_p, std::string extInfo)=0;
+	virtual void convert(int i_p, std::string extInfo)=0;
+	virtual void convert(float f_p, std::string extInfo)=0;
 	const std::string ToMorseCode(const std::string& s_p);
-protected:
-	//EMPTY
+
 };
 
 #endif
