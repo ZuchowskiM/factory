@@ -12,6 +12,10 @@ int main()
 	f1.setOutput(factory::discNumber);
 	f1.setExtInfo("abba.txt");
 	f1.convert("mamma mia");
+
+	f1.setOutput(factory::blinkNumber);
+	f1.setExtInfo("300 600 1000");
+	f1.convert(123);
 	
 
 	system("pause");

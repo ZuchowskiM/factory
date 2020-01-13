@@ -67,4 +67,8 @@ void factory::setOutput(int i_p)
 	{
 		m_m = new disc();
 	}
+	else if(i_p == factory::blinkNumber)//kolejnosc pozmieniac w razie danych zlych
+	{
+		m_m = new blink();
+	}
 }

@@ -116,6 +116,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="beep.cpp" />
+    <ClCompile Include="blink.cpp" />
     <ClCompile Include="console.cpp" />
     <ClCompile Include="disc.cpp" />
     <ClCompile Include="factory.cpp" />
@@ -124,6 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="beep.h" />
+    <ClInclude Include="blink.h" />
     <ClInclude Include="console.h" />
     <ClInclude Include="disc.h" />
     <ClInclude Include="factory.h" />

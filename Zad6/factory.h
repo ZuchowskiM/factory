@@ -3,6 +3,7 @@
 #include"beep.h"
 #include"console.h"
 #include "disc.h"
+#include "blink.h"
 
 class factory
 {
@@ -19,6 +20,7 @@ public:
 	static const int beepNumber = 1;
 	static const int consoleNumber = 2;
 	static const int discNumber = 3;
+	static const int blinkNumber = 4;
 private:
 	morse* m_m;
 	std::string extInfo;
