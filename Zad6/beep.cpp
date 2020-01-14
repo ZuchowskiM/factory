@@ -4,11 +4,11 @@
 
 beep::beep(): morse()
 {
-	m_frequency = 3200; 
-	m_dotTime = 50;    
-    m_dashTime = 100;  
-	m_pause = 100;      
-	m_spacePause = 200; 
+	m_frequency = 3200;
+	m_dotTime = 50;
+	m_dashTime = 100;
+	m_pause = 100;
+	m_spacePause = 200;
 	m_charPause = 20;
 }
 
@@ -143,8 +143,25 @@ void beep::setFromInfo(std::string info_p)
 	while (!isspace(streamFromString.get()))
 		continue;*/
 	streamFromString >> m_dotTime;
-	streamFromString >> m_dashTime;  
-	streamFromString >> m_pause;      
-	streamFromString >> m_spacePause; 
+	streamFromString >> m_dashTime;
+	streamFromString >> m_pause;
+	streamFromString >> m_spacePause;
 	streamFromString >> m_charPause;
+}
+
+morse* beep::clone() const
+{
+	return (new beep(*this));
+}
+
+const std::vector<std::string> beep::getCurrentSetup() const
+{
+	std::vector<std::string> CurrentSetup;
+	CurrentSetup.push_back(std::to_string(m_frequency));
+	CurrentSetup.push_back(std::to_string(m_dotTime));
+	CurrentSetup.push_back(std::to_string(m_dashTime));
+	CurrentSetup.push_back(std::to_string(m_pause));
+	CurrentSetup.push_back(std::to_string(m_spacePause));
+	CurrentSetup.push_back(std::to_string(m_charPause));
+	return CurrentSetup;
 }

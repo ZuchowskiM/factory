@@ -73,6 +73,7 @@ void disc::convert(std::string s_p, std::string extInfo)
 void disc::convert(int i_p, std::string extInfo)
 {
 	setFromInfo(extInfo);
+	plik.open(fileName);
 	std::string temp = ToMorseCode(std::to_string(i_p));
 
 	for (int i = 0; i < temp.size(); i++)
@@ -124,5 +125,18 @@ void disc::convert(float f_p, std::string extInfo)
 
 void disc::setFromInfo(std::string info_p)
 {
-	plik.open(info_p);
+	fileName = info_p;
+}
+
+morse* disc::clone() const
+{
+	return (new disc(*this));
+}
+
+
+const std::vector<std::string> disc::getCurrentSetup() const
+{
+	std::vector<std::string> CurrentSetup;
+	CurrentSetup.push_back(fileName);
+	return CurrentSetup;
 }

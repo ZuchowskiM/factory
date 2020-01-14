@@ -3,7 +3,9 @@
 #include<iostream>
 #include<string>
 #include<sstream>
+#include<vector>
 class factory;
+
 
 class morse
 {
@@ -20,7 +22,9 @@ protected:
 	virtual void convert(int i_p, std::string extInfo)=0;
 	virtual void convert(float f_p, std::string extInfo)=0;
 	const std::string ToMorseCode(const std::string& s_p);
+	virtual morse* clone() const = 0;
 
+	virtual const std::vector<std::string> getCurrentSetup() const = 0;
 };
 
 #endif

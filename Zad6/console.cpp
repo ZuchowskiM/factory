@@ -128,3 +128,14 @@ void console::setFromInfo(std::string info_p)
 {
 	//EMPTY
 }
+
+morse* console::clone() const
+{
+	return (new console(*this));
+}
+
+const std::vector<std::string> console::getCurrentSetup() const
+{
+	std::vector<std::string> CurrentSetup;
+	return CurrentSetup;
+}

@@ -177,3 +177,17 @@ void blink::setFromInfo(std::string info_p)
 	streamFromString >> dashSleepTime;
 	streamFromString >> SpaceSleepTime;
 }
+
+morse* blink::clone() const
+{
+	return (new blink(*this));
+}
+
+const std::vector<std::string> blink::getCurrentSetup() const
+{
+	std::vector<std::string> CurrentSetup;
+	CurrentSetup.push_back(std::to_string(dotSleepTime));
+	CurrentSetup.push_back(std::to_string(dashSleepTime));
+	CurrentSetup.push_back(std::to_string(SpaceSleepTime));
+	return CurrentSetup;
+}

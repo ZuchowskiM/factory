@@ -18,6 +18,8 @@ private:
 	void convert(int i_p, std::string extInfo);
 	void convert(float f_p, std::string extInfo);
 	void setFromInfo(std::string info_p);
+	morse* clone() const;
+	const std::vector<std::string> getCurrentSetup() const;
 
 };
 
