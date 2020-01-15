@@ -1,15 +1,20 @@
+/*
+		Klasa "disc"
+		plik .cpp
+		Autor: Micha³ ¯uchowski
+*/
 #include "disc.h"
 
 
 
 disc::disc() : morse()
 {
-
+	//EMTPTY
 }
 
 disc::disc(const disc& b_p): morse(b_p)
 {
-	
+	//EMTPTY
 }
 
 disc& disc::operator=(const disc& b_p)
@@ -24,7 +29,7 @@ disc& disc::operator=(const disc& b_p)
 
 disc::~disc()
 {
-
+	//EMTPTY
 }
 
 void disc::makeDot()

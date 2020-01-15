@@ -1,15 +1,22 @@
+/*
+		Klasa "morse"
+		plik .cpp
+		Autor: Micha³ ¯uchowski
+*/
+
+
 #include "console.h"
 
 
 
 console::console(): morse()
 {
-
+	//EMPTY
 }
 
 console::console(const console& b_p): morse(b_p)
 {
-
+	//EMPTY
 }
 
 
@@ -17,6 +24,7 @@ console& console::operator=(const console& b_p)
 {
 	if (this != &b_p)
 	{
+		//mimo ¿e operator= morse nic nie robi to wywo³uje go dla porz¹dku i nawyku
 		morse::operator=(b_p);
 	}
 
@@ -25,7 +33,7 @@ console& console::operator=(const console& b_p)
 
 console::~console()
 {
-
+	//EMPTY
 }
 
 void console::makeDot()
@@ -74,6 +82,7 @@ void console::convert(std::string s_p, std::string extInfo)
 
 void console::convert(int i_p, std::string extInfo)
 {
+	//ustalamy informacje 
 	setFromInfo(extInfo);
 	std::string temp = ToMorseCode(std::to_string(i_p));
 
@@ -131,6 +140,7 @@ void console::setFromInfo(std::string info_p)
 
 morse* console::clone() const
 {
+	//zwracamy now¹ instancjê obiektu stworzon¹ na bazie obecnego za pomoc¹ konst. kopiuj¹cego
 	return (new console(*this));
 }
 

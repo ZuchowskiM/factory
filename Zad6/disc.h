@@ -1,3 +1,13 @@
+/*
+		Klasa "disc"
+		Opis: Klasa pochodna po morse, jej metody definicje metod umo¿liwiaja przekonwertowanie danych na kod morse i
+		zapisanie go na dysku
+
+		Autor: Micha³ ¯uchowski
+		Data utworzenia: 08.01.2020
+		Data poprawki/edycja: 15.12.2020
+*/
+
 #ifndef disc_h
 #define disc_h
 #include"morse.h"

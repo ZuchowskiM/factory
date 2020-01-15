@@ -1,3 +1,10 @@
+/*
+		Klasa "morse"
+		plik .cpp
+		Autor: Micha³ ¯uchowski
+*/
+
+
 #include "morse.h"
 
 
@@ -183,6 +190,8 @@ const std::string morse::ToMorseCode(const std::string& s_p)
 		}
 		
 	}
+	//nie zwracam referencji poniewaz obiekt temp jest utworzony w funcji i
+	//i zostanie zniszczony po wyjsciu z metody
 	return temp;
 	
 }

@@ -156,6 +156,7 @@ morse* beep::clone() const
 
 const std::vector<std::string> beep::getCurrentSetup() const
 {
+	
 	std::vector<std::string> CurrentSetup;
 	CurrentSetup.push_back(std::to_string(m_frequency));
 	CurrentSetup.push_back(std::to_string(m_dotTime));
@@ -163,5 +164,6 @@ const std::vector<std::string> beep::getCurrentSetup() const
 	CurrentSetup.push_back(std::to_string(m_pause));
 	CurrentSetup.push_back(std::to_string(m_spacePause));
 	CurrentSetup.push_back(std::to_string(m_charPause));
+
 	return CurrentSetup;
 }

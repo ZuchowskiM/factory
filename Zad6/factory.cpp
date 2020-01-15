@@ -1,16 +1,25 @@
+/*
+		Klasa "disc"
+		plik .cpp
+		Autor: Micha³ ¯uchowski
+*/
+
 #include "factory.h"
-#include<typeinfo>
 
 
 
 factory::factory()
 {
+	//domyœlnie tryb dzialania fabrki to beep
 	m_m = new beep();
 }
 
 factory::factory(const factory& f_p)
 {
 	m_m = nullptr;
+
+	//tutaj korzystamy z polimorficznego konstruktora kopiuj¹cego
+	//bo nie wiem jaki obiekt aktualnie znajduje sie pod wkaznikiem m_m
 	m_m = f_p.m_m->clone();
 	extInfo = f_p.extInfo;
 
@@ -34,6 +43,8 @@ factory::~factory()
 
 void factory::convert(std::string s_p) const
 {
+	//uzna³em ¿e wys³anie kartki i zaaplikowanie jej w linii produkcyjnej
+	//bedzie nastepowac dopiero wtedy kiedy ja uruchomimy 
 	m_m->convert(s_p, extInfo);
 }
 
@@ -52,25 +63,26 @@ void factory::setExtInfo(std::string s_p)
 	extInfo = s_p;
 }
 
-void factory::setOutput(int i_p)
+void factory::setOutput(int FactoryOperatingMode)
 {
-	
-	if (i_p == factory::beepNumber)
+	//uzna³em ¿e jeœli user poda b³êdny argument nie wp³ynie to na jego tryb dzia³ania
+	//móg³ podaæ dobry
+	if (FactoryOperatingMode == factory::beepNumber)
 	{
 		delete m_m;
 		m_m = new beep();
 	}
-	else if (i_p == factory::consoleNumber)
+	else if (FactoryOperatingMode == factory::consoleNumber)
 	{
 		delete m_m;
 		m_m = new console();
 	}
-	else if (i_p == factory::discNumber)
+	else if (FactoryOperatingMode == factory::discNumber)
 	{
 		delete m_m;
 		m_m = new disc();
 	}
-	else if(i_p == factory::blinkNumber)
+	else if(FactoryOperatingMode == factory::blinkNumber)
 	{
 		delete m_m;
 		m_m = new blink();

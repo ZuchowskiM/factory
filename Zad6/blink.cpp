@@ -1,3 +1,10 @@
+/*
+		Klasa "blink"
+		plik .cpp
+		Autor: Micha³ ¯uchowski
+*/
+
+
 #include "blink.h"
 
 
@@ -172,6 +179,7 @@ void blink::convert(float f_p, std::string extInfo)
 
 void blink::setFromInfo(std::string info_p)
 {
+	//zamieniamy string na strumien dzieki czemu bedziemy mogli wpisywac wygodnie dane do zmiennych
 	std::istringstream streamFromString(info_p);
 	streamFromString >> dotSleepTime;
 	streamFromString >> dashSleepTime;
@@ -185,9 +193,12 @@ morse* blink::clone() const
 
 const std::vector<std::string> blink::getCurrentSetup() const
 {
+	//"pakujemy" vector z ustawieniamy zmiennych dla u¿ytkownika
 	std::vector<std::string> CurrentSetup;
 	CurrentSetup.push_back(std::to_string(dotSleepTime));
 	CurrentSetup.push_back(std::to_string(dashSleepTime));
 	CurrentSetup.push_back(std::to_string(SpaceSleepTime));
+
+	//brak zwrotu przez referencje CurrentSetup utworzony w metodzie
 	return CurrentSetup;
 }

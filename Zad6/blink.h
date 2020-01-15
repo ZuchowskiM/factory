@@ -1,3 +1,11 @@
+/*
+		Klasa "blink"
+		Opis: Klasa pochodna po morse, jej metody definicje metod umo¿liwiaja przedstawienie kodu morse jako miganie lampki CapsLock
+		Autor: Micha³ ¯uchowski
+		Data utworzenia: 08.01.2020
+		Data poprawki/edycja: 15.12.2020
+*/
+
 #ifndef blink_h
 #define blink_h
 #include"morse.h"
