@@ -1,5 +1,5 @@
 /*
-		Klasa "morse"
+		Klasa "console"
 		plik .cpp
 		Autor: Micha³ ¯uchowski
 */

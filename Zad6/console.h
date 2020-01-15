@@ -1,6 +1,6 @@
 /*
 		Klasa "console"
-		Opis: Klasa pochodna po morse, jej metody definicje metod umo¿liwiaja wyœwietlanie kodu morse w konsoli
+		Opis: Klasa pochodna po morse, jej definicje metod umo¿liwiaja wyœwietlanie kodu morse w konsoli
 		Autor: Micha³ ¯uchowski
 		Data utworzenia: 08.01.2020
 		Data poprawki/edycja: 15.12.2020

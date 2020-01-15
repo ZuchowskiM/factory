@@ -1,6 +1,6 @@
 /*
 		Klasa "disc"
-		Opis: Klasa pochodna po morse, jej metody definicje metod umo¿liwiaja przekonwertowanie danych na kod morse i
+		Opis: Klasa pochodna po morse, jej definicje metod umo¿liwiaja przekonwertowanie danych na kod morse i
 		zapisanie go na dysku
 		Autor: Micha³ ¯uchowski
 		Data utworzenia: 08.01.2020

@@ -1,5 +1,5 @@
 /*
-		Klasa "disc"
+		Klasa "factory"
 		plik .cpp
 		Autor: Micha³ ¯uchowski
 */

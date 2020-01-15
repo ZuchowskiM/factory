@@ -1,3 +1,12 @@
+/*
+		Klasa "beep"
+		Opis: Klasa pochodna po morse, jej definicje metod umo¿liwiaja przekonwertowanie danych na kod morse i
+		przedstawienie go jako sygna³ dŸwiêkowy z g³oœników komputera
+		Autor: Micha³ ¯uchowski
+		Data utworzenia: 08.01.2020
+		Data poprawki/edycja: 15.12.2020
+*/
+
 #ifndef beep_h
 #define beep_h
 #include"morse.h"
