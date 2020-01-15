@@ -50,6 +50,7 @@ void disc::makeSpace()
 void disc::convert(std::string s_p, std::string extInfo)
 {
 	setFromInfo(extInfo);
+	plik.open(fileName);
 	std::string temp = ToMorseCode(s_p);
 
 	for (int i = 0; i < temp.size(); i++)
@@ -105,6 +106,7 @@ void disc::convert(int i_p, std::string extInfo)
 void disc::convert(float f_p, std::string extInfo)
 {
 	setFromInfo(extInfo);
+	plik.open(fileName);
 	std::string temp = ToMorseCode(std::to_string(f_p));
 
 	for (int i = 0; i < temp.size(); i++)
@@ -131,6 +133,7 @@ void disc::convert(float f_p, std::string extInfo)
 void disc::setFromInfo(std::string info_p)
 {
 	fileName = info_p;
+	plik.open(fileName, std::ofstream::app);
 }
 
 morse* disc::clone() const

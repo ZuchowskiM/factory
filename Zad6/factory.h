@@ -1,7 +1,6 @@
 /*
 		Klasa "factory"
-		Opis: Umo¿liwa korzystanie z calej rodziny obiektów morse za pomoc¹ interfesju tej klasy
-
+		Opis: Umo¿liwa korzystanie z calej rodziny obiektów morse za pomoc¹ interfesju opisywanej klasy
 		Autor: Micha³ ¯uchowski
 		Data utworzenia: 08.01.2020
 		Data poprawki/edycja: 15.12.2020
@@ -26,7 +25,7 @@ public:
 	void convert(float f_p) const;
 	void setExtInfo(std::string s_p);
 
-	//manipulujemy setOutput za pomoc¹ zmiennych podanych pod deklaracja funkcji
+	//manipulujemy setOutput za pomoc¹ zmiennych podanych pod deklaracja tej funkcji
 	void setOutput(int FactoryOperatingMode);
 
 	///////tryby dzia³ania fabryki//////////
@@ -40,6 +39,7 @@ public:
 	const std::string& getExtInfo() const;
 
 	//zwraca ustawienie linii produkcyjnej która aktualnie jest ustawiona
+	//nale¿y pamiêtaæ ¿e ustawienia zmieniaj¹ siê dopiero po u¿yciu metody convert, nie setExtInfo()
 	const std::vector<std::string> getCurrentSetup() const;
 	
 

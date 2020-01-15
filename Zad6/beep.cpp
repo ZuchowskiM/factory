@@ -137,11 +137,11 @@ void beep::convert(float f_p, std::string extInfo)
 
 void beep::setFromInfo(std::string info_p)
 {
+	//zreyzygnowa³em z u¿ywania wyj¹tków poniewa¿ program nie wywraca siê
+	//po podaniu blednych argumentow
+	//je¿eli argument bêdzie b³edny strumien ustawi wartosc aktualnej zmiennej=0 i zablokuje siê
 	std::istringstream streamFromString(info_p);
 	streamFromString >> m_frequency;
-	/*streamFromString.clear();
-	while (!isspace(streamFromString.get()))
-		continue;*/
 	streamFromString >> m_dotTime;
 	streamFromString >> m_dashTime;
 	streamFromString >> m_pause;

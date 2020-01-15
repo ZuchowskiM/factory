@@ -4,7 +4,7 @@
 #include<Windows.h>
 
 
-class beep: public morse
+class beep: private morse
 {
 friend class factory;
 private:

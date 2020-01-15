@@ -10,7 +10,7 @@
 
 factory::factory()
 {
-	//domyœlnie tryb dzialania fabrki to beep
+	//domyœlnie tryb dzialania fabryki to beep
 	m_m = new beep();
 }
 
@@ -19,8 +19,10 @@ factory::factory(const factory& f_p)
 	m_m = nullptr;
 
 	//tutaj korzystamy z polimorficznego konstruktora kopiuj¹cego
-	//bo nie wiem jaki obiekt aktualnie znajduje sie pod wkaznikiem m_m
+	//bo nie wiemy jaki obiekt aktualnie znajduje sie pod wkaznikiem m_m
 	m_m = f_p.m_m->clone();
+	//mo¿na to by³o te¿ rozwi¹zaæ dodaj¹c zmienna która mówi w jakim trybie jest obecnie fabryka
+
 	extInfo = f_p.extInfo;
 
 }
@@ -29,7 +31,7 @@ factory& factory::operator=(const factory& f_p)
 {
 	if (this != &f_p)
 	{
-		m_m = nullptr;
+		delete m_m;
 		m_m = f_p.m_m->clone();
 		extInfo = f_p.extInfo;
 	}
@@ -66,7 +68,7 @@ void factory::setExtInfo(std::string s_p)
 void factory::setOutput(int FactoryOperatingMode)
 {
 	//uzna³em ¿e jeœli user poda b³êdny argument nie wp³ynie to na jego tryb dzia³ania
-	//móg³ podaæ dobry
+	//bo móg³ podaæ dobry
 	if (FactoryOperatingMode == factory::beepNumber)
 	{
 		delete m_m;

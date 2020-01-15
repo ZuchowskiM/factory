@@ -12,7 +12,7 @@
 #define _WIN32_WINNT 0x403
 #include <windows.h>
 
-class blink: public morse
+class blink: private morse
 {
 	friend class factory;
 private:

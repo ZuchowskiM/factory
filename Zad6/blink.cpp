@@ -199,6 +199,6 @@ const std::vector<std::string> blink::getCurrentSetup() const
 	CurrentSetup.push_back(std::to_string(dashSleepTime));
 	CurrentSetup.push_back(std::to_string(SpaceSleepTime));
 
-	//brak zwrotu przez referencje CurrentSetup utworzony w metodzie
+	//brak zwrotu przez referencje - CurrentSetup utworzony w metodzie
 	return CurrentSetup;
 }

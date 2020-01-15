@@ -195,3 +195,28 @@ const std::string morse::ToMorseCode(const std::string& s_p)
 	return temp;
 	
 }
+
+void morse::convert(int i_p, std::string extInfo)
+{
+	setFromInfo(extInfo);
+	std::string temp = ToMorseCode(std::to_string(i_p));
+
+	for (int i = 0; i < temp.size(); i++)
+	{
+		if (temp[i] == '-')
+		{
+			makeDash();
+
+		}
+		else if (temp[i] == '.')
+		{
+			makeDot();
+
+		}
+		else
+		{
+			makeSpace();
+		}
+
+	}
+}

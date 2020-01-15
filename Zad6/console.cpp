@@ -146,6 +146,7 @@ morse* console::clone() const
 
 const std::vector<std::string> console::getCurrentSetup() const
 {
+	//tutaj setup bêdzie akurat pusty
 	std::vector<std::string> CurrentSetup;
 	return CurrentSetup;
 }

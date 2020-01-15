@@ -10,8 +10,9 @@
 #define console_h
 #include"morse.h"
 
-//dzieczinie publiczne przy obecnej hermetyzacji sprawdza sie dobrze
-class console : public morse
+//dzieczinie private umieœci wszystko w sk³adnikach prywatnych
+//po tej klasie pochodnej nie zamierzamy dziedziczyæ tym bardziej w tym wzorcu
+class console : private morse
 {
 	friend class factory;
 private:
